@@ -52,7 +52,7 @@ public class JSONService {
         }
 
 
-        return Response.status(201).entity(result).build();
+        return Response.status(304).entity(result).build();
     }
 
     @DELETE

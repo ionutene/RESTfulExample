@@ -75,11 +75,11 @@ public class JDBCExample {
             stmt = con.createStatement();
 
             //Step 3 : SQL Query
-            String query = "SELECT * FROM product";
+            String querySelect = "SELECT * FROM product";
 
             List<Product> products = new LinkedList<Product>();
             //Step 4 : Run Query In ResultSet
-            ResultSet rset = stmt.executeQuery(query);
+            ResultSet rset = stmt.executeQuery(querySelect);
 
             System.out.println("Found in DB");
 
@@ -168,10 +168,10 @@ public class JDBCExample {
             //Step 3 : SQL Query
             String name = product.getName();
             int qty = product.getQty();
-            String updatequery = "UPDATE product SET name='" + name + "',qty='" + qty + "' WHERE name='" + name + "'";
+            String updateQuery = "UPDATE product SET name='" + name + "',qty='" + qty + "' WHERE name='" + name + "'";
 
             //Step 4 : Run Query
-            stmt.executeUpdate(updatequery);
+            stmt.executeUpdate(updateQuery);
             System.out.println("Table Updated Successfully");
 
             System.out.println("******** Records Are *********");
